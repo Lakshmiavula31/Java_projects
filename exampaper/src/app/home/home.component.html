@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="scroll-container">
+  
+    <!-- Left Container: Stepper -->
+    <div class="stepper-container">
+      
+      
+        
+          <mat-nav-list>
+            <div *ngFor="let step of steps; let i = index" class="step-item">
+              <button
+                mat-button
+                (click)="navigateToQuestion(i + 1)"
+                [ngClass]="{ active: currentStep === i + 1 }"
+              >
+                 {{ i + 1 }}
+              </button>
+            </div>
+          </mat-nav-list>
+        
+    
+      
+    </div>
+   
+    <!-- Right Container: Main Content -->
+     <!-- <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>   -->
+  </div> 
+</div>

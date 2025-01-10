@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+.div1{
+    width: 15%;
+    background-color: gainsboro;
+    
+}
+.div2{
+    width: 45%;
+    background-color:aquamarine;
+}
+.div3{
+    width: 20%;
+    background-color:#f0a500;
+}
+
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .div1,.div2.div3{
+        width: 100;
+    }
+}

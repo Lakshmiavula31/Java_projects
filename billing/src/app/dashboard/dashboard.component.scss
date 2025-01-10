@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+.div1{
+    width: 25%;
+    background-color: #f0a500
+}
+.div2{
+    width: 65%;
+    background-color: aqua;
+}
+.div3{
+    width: 10%;
+    background-color:#f0a500;
+}
+
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .div1,.div2.div3{
+        width: 100;
+    }
+}

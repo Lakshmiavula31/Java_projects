@@ -1,0 +1,23 @@
+<div class="question-container">
+    <h3>Question {{ questionNumber }} of 20</h3>
+    <p>{{ question.text }}</p>
+  
+    <pre class="code-snippet">{{ question.codeSnippet }}</pre>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div *ngFor="let option of question.options; let i = index" class="option">
+        <input
+          type="radio"
+          [value]="option"
+          name="options"
+          [(ngModel)]="selectedOption"
+          id="option{{ i }}"
+          required
+        />
+        <label for="option{{ i }}">{{ i + 1 }}. {{ option }}</label>
+      </div>
+  
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  

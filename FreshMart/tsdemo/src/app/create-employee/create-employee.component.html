@@ -1,0 +1,63 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="mat-form-field">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name"/>
+            <mat-error *ngIf="employeeForm.controls['name'].invalid&& employeeForm.controls['name'].touched">
+                Name is required and must be at least 3 characters long..
+
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mat-form-field">
+        <mat-form-field appearance="fill">
+            <mat-label>DOB</mat-label>
+            <input matInput formControlName="dob"/>
+            <mat-error *ngIf="employeeForm.controls['dob'].invalid&& employeeForm.controls['dob'].touched">
+                DOB is required and must be at least 3 characters long..
+
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mat-form-field">
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email"/>
+            <mat-error *ngIf="employeeForm.controls['email'].invalid&& employeeForm.controls['email'].touched">
+                please enter a valid email..
+
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mat-form-field">
+        <mat-form-field appearance="fill">
+            <mat-label>Salary</mat-label>
+            <input matInput formControlName="salary"/>
+            <mat-error *ngIf="employeeForm.controls['salary'].invalid&& employeeForm.controls['salary'].touched">
+                
+
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mat-form-field">
+        <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="address"/>
+            <mat-error *ngIf="employeeForm.controls['address'].invalid&& employeeForm.controls['address'].touched">
+                
+
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="employeeForm.invalid">Submit</button>
+</form>

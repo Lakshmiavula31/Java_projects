@@ -1,0 +1,13 @@
+<div>
+    <h2>Add New Teacher</h2>
+    <form (submit)="addTeacher();$event.preventDefault()">
+        <label >Name:</label>
+        <input [(ngModel)] required/>
+        <label>Subject:</label>
+        <input [(ngModel)] required/>
+        <label>EXPERIENCE:</label>
+        <input type="number" [(ngModel)] required/>
+
+        <button type="submit">Add Teacher</button>
+    </form>
+</div>

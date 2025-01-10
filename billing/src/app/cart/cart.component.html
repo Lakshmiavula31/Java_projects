@@ -1,0 +1,51 @@
+<div class="container">
+    <img src="assets/images/market-logo.jpg" height="95px" width="110px">
+</div>
+<div><marquee>Welcome To Fresh Mart</marquee></div>
+<div class="cart-container">
+    <div class="scrollable-content">
+        <div *ngFor="let item of divs" class="content-div">
+            <div class="row">
+                <div>
+                    <span>{{ item.title}}</span>
+                    <p>{{ item.content}}</p>
+                </div>
+                <div class="price-container">
+                    <span>$1000</span>
+                    <span class="small-button-container">
+                        <a href="#"><mat-icon class="small-icons">add</mat-icon></a>
+                        <a href="#"><mat-icon class="small-icons">remove</mat-icon></a>
+                        <a href="#"><mat-icon class="small-icons">delete</mat-icon></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="total-container">
+    <div class="row">
+        <div class="heading">Total:</div>
+        <div class="value">{{ total | currency}}</div>        
+    </div>
+    <div class="row">
+        <div class="heading">GST (18%):</div>
+        <div class="value">{{ gst | currency}}</div>
+    </div>
+    <div class="row">
+        <div class="heading">Grand Total : </div>
+        <div class="value">{{grandTotal | currency}}</div>
+    </div>
+</div>
+
+<div class="button-container">
+    <button mat-raised-button color="primary" class="submit-button">
+    <mat-icon>check</mat-icon>submit
+    </button>
+
+    <button mat-raised-button color="warn" class="clear-button">
+        <mat-icon>clear</mat-icon>clear
+    </button>
+
+
+</div>

@@ -1,0 +1,22 @@
+<div>
+    <h2>Teachers List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>SUBJECT</th>
+                <th>EXPERIENCE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let teacher of teachers">
+                <td>{{ teacher.ID}}</td>
+                <td>{{ teacher.NAME}}</td>
+                <td>{{ teacher.SUBJECT}}</td>
+                <td>{{ teacher.EXPERIENCE}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <!-- First div for Question Numbers -->
+    <div class="question-buttons">
+      <mat-nav-list>
+        <a mat-list-item *ngFor="let question of questions; index as i" (click)="selectQuestion(i)">
+          Question {{ i + 1 }}
+        </a>
+      </mat-nav-list>
+    </div>
+  
+    <!-- Second div for Question Display -->
+    <div class="question-display">
+      <h3>{{ currentQuestion?.text }}</h3>
+    </div>
+  
+    <!-- Third div for Multiple Choices -->
+    <div class="choices">
+      <form [formGroup]="answerForm" (ngSubmit)="submitAnswer()">
+        <mat-radio-group formControlName="selectedOption">
+          <mat-radio-button *ngFor="let option of currentQuestion?.options" [value]="option.id">
+            {{ option.text }}
+          </mat-radio-button>
+        </mat-radio-group>
+        <button mat-raised-button color="primary" type="submit">Submit Answer</button>
+      </form>
+    </div>
+  </div>
+  

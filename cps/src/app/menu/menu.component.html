@@ -1,0 +1,110 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-button routerLink=""><mat-icon>home</mat-icon>Home</button>
+    <button mat-button [matMenuTriggerFor]="studentMenu"><mat-icon>school</mat-icon>Students</button>
+    <button mat-button [matMenuTriggerFor]="staffMenu"><mat-icon>group</mat-icon>Staff</button>
+    <button mat-button [matMenuTriggerFor]="curriculumMenu"><mat-icon>dataset</mat-icon>Curriculum</button>
+    <button mat-button [matMenuTriggerFor]="alumniMenu"><mat-icon>diamond</mat-icon>Alumni</button>
+    <button mat-button [matMenuTriggerFor]="financialMenu"><mat-icon>paid</mat-icon>Financials</button>
+    <button mat-button [matMenuTriggerFor]="userMenu"><mat-icon>hub</mat-icon>Communication</button>
+    <button mat-button [matMenuTriggerFor]="communicationMenu"><mat-icon>badge</mat-icon>Users</button>
+    <button mat-button [matMenuTriggerFor]="settingsMenu"><mat-icon>settings</mat-icon>Settings</button>
+    <button mat-button [matMenuTriggerFor]="reportsMenu"><mat-icon>history_edu</mat-icon>Reports</button>
+</mat-toolbar>
+
+<mat-menu #studentMenu="matMenu">
+    <button mat-menu-item routerLink="enrollments">Enrollments</button>
+    <button mat-menu-item>Academics</button>
+    <button mat-menu-item>Grades & Reports</button>
+</mat-menu>
+
+<mat-menu #staffMenu="matMenu">
+    <button mat-menu-item>Teaching Staff</button>
+    <button mat-menu-item>Non Teaching staff</button>
+</mat-menu>    
+
+<mat-menu #curriculumMenu="matMenu">
+    <button mat-menu-item>Classes</button>
+    <button mat-menu-item>Subjects</button>
+    <button mat-menu-item>Exams</button>
+    <button mat-menu-item>Assignments</button>
+    <button mat-menu-item>Time Table</button>
+</mat-menu>
+
+<mat-menu #alumniMenu="matMenu">
+    <button mat-menu-item>Old Students</button>
+    <button mat-menu-item>Old Staff</button>
+    <button mat-menu-item>Past Events</button>
+</mat-menu>
+
+<mat-menu #financialMenu="matMenu">
+    <button mat-menu-item>Fee Management</button>
+    <button mat-menu-item>Salary Management</button>
+    <button mat-menu-item>Expenses</button>
+    <button mat-menu-item>Advances</button>
+    <button mat-menu-item>Credits</button>
+    <button mat-menu-item>Debits</button>
+    <button mat-menu-item>Payments</button>
+</mat-menu>
+
+<mat-menu #userMenu="matMenu">
+    <button mat-menu-item>Mange Users</button>
+    <button mat-menu-item>Roles</button>
+</mat-menu>
+
+<mat-menu #communicationMenu="matMenu">
+    <button mat-menu-item>Announcements</button>
+    <button mat-menu-item>Parent-Teacher</button>
+    <button mat-menu-item>Messaging System</button>
+    <button mat-menu-item>Notifications</button>
+</mat-menu>
+
+<mat-menu #settingsMenu="matMenu">
+    <button mat-menu-item>Profile Settings</button>
+    <button mat-menu-item>Resets</button>
+    <button mat-menu-item>Configurations</button>
+</mat-menu>
+
+<mat-menu #reportsMenu="matMenu">
+    <button mat-menu-item>Student Reports</button>
+    <button mat-menu-item>Fee Slips</button>
+    <button mat-menu-item>Pay Slips</button>
+    <button mat-menu-item>Circulars</button>
+</mat-menu>
+
+<button mat-icon-button id="menu-button" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+</button>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side">
+        <button mat-menu-item routerLink=""><mat-icon>home</mat-icon>Home</button>
+        <button mat-menu-item [matMenuTriggerFor]="studentMenu"><mat-icon>school</mat-icon>Students</button>
+        <button mat-menu-item [matMenuTriggerFor]="staffMenu"><mat-icon>group</mat-icon>Staff</button>
+        <button mat-menu-item [matMenuTriggerFor]="curriculumMenu"><mat-icon>dataset</mat-icon>Curriculum</button>
+        <button mat-menu-item [matMenuTriggerFor]="alumniMenu"><mat-icon>diamond</mat-icon>Alumni</button>
+        <button mat-menu-item [matMenuTriggerFor]="financialMenu"><mat-icon>paid</mat-icon>Financials</button>
+        <button mat-menu-item [matMenuTriggerFor]="communicationMenu"><mat-icon>hub</mat-icon>Communication</button>
+        <button mat-menu-item [matMenuTriggerFor]="userMenu"><mat-icon>badge</mat-icon>Users</button>
+        <button mat-menu-item [matMenuTriggerFor]="settingsMenu"><mat-icon>settings</mat-icon>Settings</button>
+        <button mat-menu-item [matMenuTriggerFor]="reportsMenu"><mat-icon>history_edu</mat-icon>Reports</button>
+
+        
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content>
+        <!-- main content goes here -->
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+

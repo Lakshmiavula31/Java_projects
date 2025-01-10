@@ -1,0 +1,30 @@
+.logo{
+    height: 100px;
+    width: 100px;
+}
+.logo-title{
+    font-size: 15px;
+    color: rgb(200, 255, 0);
+    padding-left: 20px;
+}
+.container{
+    background-color: aqua;
+    display: flex;
+    color: white;
+
+}
+.left,.middle,.right{
+    background-color:rgb(1, 63, 71);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+    .middle,.right{
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.user{
+    font-size: 12px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    padding-top: 10px;
+}
+
+.cart-container{
+    display: flex;
+    flex-direction: column;
+}
+.cart-box{
+    background-color: white;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    margin: 10px 10px;
+    padding: 13px 5px;
+    align-content: center;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 13px;
+}

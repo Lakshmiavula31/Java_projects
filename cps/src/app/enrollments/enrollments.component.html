@@ -1,0 +1,17 @@
+<mat-form-field>
+    <mat-label>First Number </mat-label>
+    <input matInput [(ngModel)]="x">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Second Number </mat-label>
+    <input matInput [(ngModel)]="y">
+</mat-form-field>
+<br>
+
+<button mat-flat-button (click)='sum()'>SUM</button>
+<button mat-flat-button (click)="multiplication()">Multiplication</button>
+<button mat-flat-button (click)="division()">Division</button>
+<button mat-flat-button (click)="subtration()">Subtraction</button>
+<h1>{{ total }}</h1>
+

@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  .question-buttons {
+    width: 10%;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  .question-display {
+    width: 45%;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  
+  .choices {
+    width: 45%;
+    padding: 20px;
+  }
+  
